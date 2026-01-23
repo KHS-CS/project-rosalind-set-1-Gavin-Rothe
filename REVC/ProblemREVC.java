@@ -1,24 +1,21 @@
+public class R3{
+public static void main(String[] args){
+ String dna = "AAAACCCGGT";
+ String rna = "";
+ for(int i = 0; i < dna.length(); i++){
+            char c = dna.charAt(i);
 
-/**
- * Write a description of class ProblemRNA here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class ProblemREVC {
-    public static void main() {
-        // replace this string with the one from Project Rosalind
-        final String inputDNA = "AAAACCCGGT";
-        final String output = reverseComplement(inputDNA);
-        // you can copy and paste from the terminal window into 
-        //   Project Rosalind to check your answer
-        System.out.println(output);
-    }
+            if (c == 'A') rna += 'T';
+            if (c == 'C') rna += 'G';
+            if (c == 'G') rna += 'C';
+            if (c == 'T') rna += 'A';
+        }
         
-    // This should take the given string and return a String 
-    //   where As and Ts are swapped, Cs and Gs are swapped, 
-    //   and is reversed. 
-    private static String reverseComplement(String dnaString) {
-        return "ACCGGGTTTT";
-    }    
+String reverseRna = "";
+for (int i = rna.length() - 1; i >= 0; i--) {
+            reverseRna += rna.charAt(i);
+        }
+    
+ System.out.println(reverseRna);
+}
 }
